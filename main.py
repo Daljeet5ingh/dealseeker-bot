@@ -24,7 +24,7 @@ def post_deals():
     deals = fetch_amazon_deals()
     for deal in deals:
         try:
-            message = f"🔥 {deal['title']}
+            message = f"🔥 {deal['title']}\n💰 Price: ₹{deal['price']}\n🔗 {deal['link']}"
 👉 {deal['link']}"
             bot.send_message(channel_id, message)
         except Exception as e:
